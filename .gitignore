@@ -34,6 +34,8 @@ next-env.d.ts
 
 .next
 .agents
+.claude
+nesilnoble/
 
 # static html dumps & prototypes
 Steffi_Stalin_Portfolio_v5.html

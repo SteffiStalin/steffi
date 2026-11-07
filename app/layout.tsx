@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gowtham0x.github.io/steffi_akkow";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://steffistalin.github.io/steffi";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://steffistalin.github.io"),
