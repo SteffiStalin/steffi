@@ -34,3 +34,10 @@ next-env.d.ts
 
 .next
 .agents
+
+# static html dumps & prototypes
+Steffi_Stalin_Portfolio_v5.html
+Steffi_Stalin_Portfolio_mobile*.html
+ss.html
+ssss.html
+*.html
