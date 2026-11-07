@@ -8,6 +8,7 @@ import ScratchCard from "@/components/ScratchCard";
 export default function About() {
   const lineRef = useRef<SVGPathElement>(null);
   const bigTextRef = useRef<HTMLParagraphElement>(null);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -225,7 +226,7 @@ export default function About() {
       <div className="pol p1" title="2025 - Mikasa">
         <div
           style={{
-            backgroundImage: "url('/mikasa.jpeg')",
+            backgroundImage: `url('${basePath}/mikasa.jpeg')`,
             backgroundSize: "cover",
             backgroundPosition: "center 20%",
           }}
@@ -237,7 +238,7 @@ export default function About() {
           style={{
             position: "relative",
             overflow: "hidden",
-            backgroundImage: "url('/flower.jpeg')",
+            backgroundImage: `url('${basePath}/flower.jpeg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

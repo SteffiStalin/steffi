@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Story() {
   const containerRef = useRef<HTMLElement>(null);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -54,7 +55,7 @@ export default function Story() {
       </div>
 
       <div className="pol2" aria-hidden="true" title="Steffi">
-        <i style={{ backgroundImage: "url('/pikachu.jpeg')" }} />
+        <i style={{ backgroundImage: `url('${basePath}/pikachu.jpeg')` }} />
       </div>
     </section>
   );

@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const siteUrl = "https://steffistalin.github.io/portfolio-website";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gowtham0x.github.io/steffi_akkow";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://steffistalin.github.io"),
@@ -159,6 +160,18 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Mono:wght@400;700&family=Caveat:wght@600&family=Inter:wght@400;500;600;800&display=swap"
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              :root {
+                --ph: url("${basePath}/pikachu.jpeg");
+              }
+              .p1 div {
+                background: url("${basePath}/mikasa.jpeg") center 20% / cover no-repeat !important;
+              }
+            `,
+          }}
         />
         <script
           type="application/ld+json"
