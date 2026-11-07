@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { playThockSound } from "@/utils/sound";
@@ -9,7 +9,6 @@ export default function Works() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const snRef = useRef<HTMLDivElement>(null);
   const cardsContainerRef = useRef<HTMLDivElement>(null);
-  const [cardModes, setCardModes] = useState<Record<string, "visual" | "arch">>({});
 
   const projects = [
     {
@@ -444,63 +443,10 @@ export default function Works() {
                     ))}
                   </ul>
 
-                  {/* Visual vs Architecture Mode Toggle */}
-                  <div
-                    className="card-mode-toggle"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      e.stopPropagation();
-                    }}
-                  >
-                    <button
-                      type="button"
-                      className={`mode-btn ${cardModes[p.num] !== "arch" ? "active" : ""}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setCardModes((prev) => ({ ...prev, [p.num]: "visual" }));
-                      }}
-                    >
-                      Visual
-                    </button>
-                    <button
-                      type="button"
-                      className={`mode-btn ${cardModes[p.num] === "arch" ? "active" : ""}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setCardModes((prev) => ({ ...prev, [p.num]: "arch" }));
-                      }}
-                    >
-                      Architecture
-                    </button>
-                  </div>
                 </div>
 
                 <div className="pm" aria-hidden="true">
-                  {cardModes[p.num] === "arch" ? (
-                    <div className="arch-card-view">
-                      <div className="arch-top-badge">ENGINEERING SPEC</div>
-                      <div className="arch-stat-row">
-                        <span>FPS TARGET</span>
-                        <b>60 FPS</b>
-                      </div>
-                      <div className="arch-stat-row">
-                        <span>LAYOUT SHIFT</span>
-                        <b>0 CLS</b>
-                      </div>
-                      <div className="arch-stat-row">
-                        <span>STACK</span>
-                        <b>{p.tech.join(" · ")}</b>
-                      </div>
-                      <div className="arch-stat-row">
-                        <span>VIEWPORT</span>
-                        <b>Fluid Responsive</b>
-                      </div>
-                    </div>
-                  ) : (
-                    p.svg
-                  )}
+                  {p.svg}
                 </div>
               </div>
             </a>

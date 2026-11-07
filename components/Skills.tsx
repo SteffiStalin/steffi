@@ -286,6 +286,14 @@ export default function Skills() {
           <h3 className="px">education</h3>
 
           <div className="er">
+            <span className="mo">2026 — Present</span>
+            <div>
+              <b>MBA · Panimalar Engineering College</b>
+              <p>Currently Pursuing</p>
+            </div>
+          </div>
+
+          <div className="er">
             <span className="mo">2021 — 2025</span>
             <div>
               <b>B.E. · St. Joseph’s College of Engineering</b>

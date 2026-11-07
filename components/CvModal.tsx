@@ -96,6 +96,13 @@ export default function CvModal({ isOpen, onClose }: CvModalProps) {
         <div className="cv-section">
           <h4>EDUCATION & ACADEMICS</h4>
           <div className="cv-row">
+            <span className="cv-year">2026 — Present</span>
+            <div>
+              <b>MBA (Master of Business Administration)</b>
+              <p>Panimalar Engineering College · Currently Pursuing</p>
+            </div>
+          </div>
+          <div className="cv-row">
             <span className="cv-year">2021 — 2025</span>
             <div>
               <b>B.E. Electronics & Communication Engineering</b>
